@@ -8,10 +8,11 @@ import datetime as dt
 
 # Ruta a Base de Datos
 #PATH_BASE_DATOS = "http://superiorcore:71ZRUSThCdIOO5MYikj1@superiorcore.sb02.stations.graphenedb.com:24789/db/data/"
-PATH_BASE_DATOS = "http://neo4j:neo1234@192.168.1.1:7474/db/data"
-#PATH_BASE_DATOS = "localhost:7474"
+#PATH_BASE_DATOS = "http://neo4j:neo1234@192.168.1.1:7474/db/data"  # Acceso Remoto
+PATH_BASE_DATOS = "localhost:7474"  # Acceso local
+USUARIO = "neo4j"           # Acceso local
+PASS = "sistemas"           # Acceso local
 #PATH_BASE_DATOS = "192.168.1.1:7474"
-#USUARIO = "neo4j"
 #PASS = "admin_neo"
 #PASS = "neo1234"
 
@@ -26,9 +27,9 @@ class ConexionBaseDatos():
     """
     def __init__(self):
         super(ConexionBaseDatos, self).__init__()
-        #authenticate(PATH_BASE_DATOS, USUARIO, PASS)    # Solo en local autenticación
-        self.graph = Graph(PATH_BASE_DATOS)       # nube
-        #self.graph = Graph()
+        authenticate(PATH_BASE_DATOS, USUARIO, PASS)    # Acceso local
+        self.graph = Graph()                   # Acceso Local
+        #self.graph = Graph(PATH_BASE_DATOS)       # Acceso Remoto
 
     def consultar_grupo(self, grupo):
         """

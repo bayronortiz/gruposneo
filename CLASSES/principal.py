@@ -128,7 +128,3 @@ class Principal(QtGui.QMainWindow):
         else:
             QtGui.QMessageBox.warning(self, 'Error', 'Error al Eliminar'
                     ' grupo, usted no es el propietario.')
-
-
-
-
