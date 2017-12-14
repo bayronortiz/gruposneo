@@ -43,7 +43,8 @@ class InformacionGrupo(QtGui.QDialog):
         if self.aux is False:
             self.info.btAgregar.setEnabled(False)
             self.info.bteliminarintegrante.setEnabled(False)
-
+        else:
+            self.info.btAbandonargrupo.setEnabled(False)    
 
     def listeners(self):
         QtCore.QObject.connect(self.info.btAgregar,QtCore.SIGNAL('clicked()'),
