@@ -43,7 +43,8 @@ class Graficos():
         inc = 1
 
         for i in range(len(cantCorreos)):
-            plt.bar(X + espacio, cantCorreos[i], color = colores, width = 0.25)
+            plt.bar(X + espacio, cantCorreos[0][i], color = 'b', width = 0.25)
+            #plt.bar(X + espacio, cantCorreos[1][i], color = colores, width = 0.25)
             esto = float(colores) + inc
             colores = repr(esto)
             espacio = 0.25
