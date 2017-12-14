@@ -140,8 +140,8 @@ class InformacionGrupo(QtGui.QDialog):
                 self.info.listIntegrantes.addItem(item.email)
 
     def guardar_cambios(self):
-        nombre = self.nuevo.txtNombre.text().lower()
-        descripcion = self.nuevo.txtDescripcion.toPlainText()
+        nombre = self.info.txtGrupo.text().lower()
+        descripcion = self.info.txtDescripcion.toPlainText()
 
         grupo_modificado = Grupo(nombre=str(nombre), descripcion=str(descripcion))
         res = self.conexionDB.act_grupo(grupo_modificado, self.nombre_grupo)
