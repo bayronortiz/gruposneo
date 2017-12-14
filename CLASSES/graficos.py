@@ -79,11 +79,12 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            #listaNombres.append(('yo', nombre))
-            listaNombres.append(nombre)
+            listaNombres.append(('yo', nombre))
+            #listaNombres.append(nombre)
             listaEnviados.append(enviados)
             cont = cont + 1
 
+        print(listaNombres)
         """en listaNombres las ids de las personas que conforman el grupo.
             En la posición 1 de todas las tuplas irá el usuario actual"""
 
@@ -141,10 +142,11 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            #listaNombres.append((nombre,'yo'))
-            listaNombres.append(nombre)
+            listaNombres.append((nombre,'yo'))
+            #listaNombres.append(nombre)
             listaRecibidos.append(recibidos)
             cont = cont + 1
+        print(listaNombres)
 
         """en listaNombres las ids de las personas que conforman el grupo.
             En la posición 1 de todas las tuplas irá el usuario actual"""
