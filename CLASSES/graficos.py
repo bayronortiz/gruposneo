@@ -49,6 +49,7 @@ class Graficos():
             #colores = repr(esto)
             espacio = 0.25
 
+        plt.title("Diagrama Enviados/Recibidos")
         plt.xticks(X + 0.38, listaNombres) #etiquetas en el eje X
         enviados = mpatches.Patch(color=colores[0], label='enviados')
         recibidos = mpatches.Patch(color=colores[1], label='recibidos')
@@ -78,7 +79,8 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            listaNombres.append(('yo', nombre))
+            #listaNombres.append(('yo', nombre))
+            listaNombres.append(nombre)
             listaEnviados.append(enviados)
             cont = cont + 1
 
@@ -114,6 +116,7 @@ class Graficos():
            posición de las etiquetas en la línea"""
 
         # mostrar la gráfica
+        plt.title("Grafo Enviados")
         plt.show()
 
     def graficaRecibidos(lista):
@@ -138,7 +141,8 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            listaNombres.append((nombre,'yo'))
+            #listaNombres.append((nombre,'yo'))
+            listaNombres.append(nombre)
             listaRecibidos.append(recibidos)
             cont = cont + 1
 
@@ -174,4 +178,5 @@ class Graficos():
            posición de las etiquetas en la línea"""
 
         # mostrar la gráfica
+        plt.title("Grafo Recibidos")
         plt.show()
