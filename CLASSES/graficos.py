@@ -39,19 +39,19 @@ class Graficos():
         X = np.arange(cantPersonas)
 
         espacio = 0
-        colores = '0.0'
+        colores = ('g','b')
         inc = 1
 
         for i in range(len(cantCorreos)):
-            plt.bar(X + espacio, cantCorreos[i], color = 'b', width = 0.25)
+            plt.bar(X + espacio, cantCorreos[i], color = colores[i], width = 0.25)
             #plt.bar(X + espacio, cantCorreos[1][i], color = colores, width = 0.25)
             esto = float(colores) + inc
             colores = repr(esto)
             espacio = 0.25
 
         plt.xticks(X + 0.38, listaNombres) #etiquetas en el eje X
-        enviados = mpatches.Patch(color='k', label='enviados')
-        recibidos = mpatches.Patch(color='w', label='recibidos')
+        enviados = mpatches.Patch(color=colores[0], label='enviados')
+        recibidos = mpatches.Patch(color=colores[1], label='recibidos')
 
         plt.legend(handles=[enviados,recibidos])
         plt.show()
