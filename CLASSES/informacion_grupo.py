@@ -44,7 +44,7 @@ class InformacionGrupo(QtGui.QDialog):
             self.info.btAgregar.setEnabled(False)
             self.info.bteliminarintegrante.setEnabled(False)
         else:
-            self.info.btAbandonargrupo.setEnabled(False)    
+            self.info.btAbandonargrupo.setEnabled(False)
 
     def listeners(self):
         QtCore.QObject.connect(self.info.btAgregar,QtCore.SIGNAL('clicked()'),
@@ -67,9 +67,14 @@ class InformacionGrupo(QtGui.QDialog):
 
     def Eliminar_integrante(self):
         self.eliminar_seleccionado=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
-        aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
-        self.info.listIntegrantes.clear()
-        self.llenar_datos_grupo()
+
+        if not self.conexionDB.consultar_propietario_grupo(self.eliminar_seleccionado, self.grupo_actual):
+            aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
+            self.info.listIntegrantes.clear()
+            self.llenar_datos_grupo()
+        else:
+            QtGui.QMessageBox.warning(self, 'Información', 'No se puede realizar la operación, debido a que'
+            ' usted es el propietario del grupo.')
 
     def Abandonar_grupo(self):
         abandonar=Usuario(email=self.usuario_actual,ultimo_acceso="", total_emails=0)
