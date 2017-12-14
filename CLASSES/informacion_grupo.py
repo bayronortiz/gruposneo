@@ -61,7 +61,7 @@ class InformacionGrupo(QtGui.QDialog):
         QtCore.QObject.connect(self.info.btrecibidos,QtCore.SIGNAL('clicked()'),
                             self.Recibidos)
         QtCore.QObject.connect(self.info.btGuardar,QtCore.SIGNAL('clicked()'),
-                            self.)
+                            self.guardar_cambios)
 
     def item_seleccionado(self,item):
         self.item = item
