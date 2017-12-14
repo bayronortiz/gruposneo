@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>370</width>
-    <height>573</height>
+    <width>391</width>
+    <height>595</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,7 +40,7 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>530</y>
+     <y>550</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -53,8 +53,8 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>470</y>
-     <width>121</width>
+     <y>490</y>
+     <width>141</width>
      <height>24</height>
     </rect>
    </property>
@@ -71,7 +71,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>500</y>
+     <y>520</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -89,7 +89,7 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>500</y>
+     <y>520</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -106,9 +106,9 @@
   <widget class="QPushButton" name="bteliminarintegrante">
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>470</y>
-     <width>121</width>
+     <x>40</x>
+     <y>490</y>
+     <width>141</width>
      <height>24</height>
     </rect>
    </property>
@@ -125,8 +125,8 @@
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>440</y>
-     <width>121</width>
+     <y>460</y>
+     <width>141</width>
      <height>24</height>
     </rect>
    </property>
@@ -143,8 +143,8 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>280</y>
-     <width>71</width>
+     <y>300</y>
+     <width>171</width>
      <height>16</height>
     </rect>
    </property>
@@ -162,7 +162,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>310</y>
+     <y>330</y>
      <width>292</width>
      <height>114</height>
     </rect>
@@ -190,9 +190,9 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>50</x>
-     <y>440</y>
-     <width>121</width>
+     <x>40</x>
+     <y>460</y>
+     <width>141</width>
      <height>24</height>
     </rect>
    </property>
@@ -210,7 +210,7 @@
     <rect>
      <x>40</x>
      <y>70</y>
-     <width>68</width>
+     <width>121</width>
      <height>16</height>
     </rect>
    </property>
@@ -273,6 +273,24 @@
    </property>
    <property name="text">
     <string>Nombre:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btGuardar">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>260</y>
+     <width>131</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Guardar Cambios</string>
    </property>
   </widget>
  </widget>

@@ -323,6 +323,15 @@ class ConexionBaseDatos():
         except:
             return False
 
+    def act_grupo(self, grupo, nom_ant):
+        consulta = ("MATCH(g:Grupo{nombre:{N_ANT}}) SET g.nombre={N_NEW}, g.descripcion={D}")
+        try:
+            self.graph.cypher.execute(consulta, {"N_ANT": str(nom_ant),
+                        "N_NEW": grupo.get_nombre(), "D": grupo.get_descripcion()})
+            return True
+        except:
+            return False
+
     def agregar_usuario_grupo(self, nuevo_usuario, grupo):
         lista_emails = []
         usr_tmp2 = None

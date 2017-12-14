@@ -60,6 +60,8 @@ class InformacionGrupo(QtGui.QDialog):
                             self.Enviados)
         QtCore.QObject.connect(self.info.btrecibidos,QtCore.SIGNAL('clicked()'),
                             self.Recibidos)
+        QtCore.QObject.connect(self.info.btGuardar,QtCore.SIGNAL('clicked()'),
+                            self.)
 
     def item_seleccionado(self,item):
         self.item = item
@@ -136,3 +138,12 @@ class InformacionGrupo(QtGui.QDialog):
         if len(usuarios) != 0:
             for item in usuarios:
                 self.info.listIntegrantes.addItem(item.email)
+
+    def guardar_cambios(self):
+        grupo_modificado = Grupo(nombre=str(self.info.txtNombre.text()), descripcion=str(self.info.txtDescripcion.text()))
+        res = self.conexionDB.act_grupo(grupo_modificado, self.nombre_grupo)
+
+        if res is True:
+            QtGui.QMessageBox.information(self, 'Información', 'El Grupo ha sido modificado correctamente.')
+        else:
+            QtGui.QMessageBox.warning(self, 'Información', 'No se puede modificar el grupo.')
