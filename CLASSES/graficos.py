@@ -57,7 +57,7 @@ class Graficos():
         plt.legend(handles=[enviados,recibidos])
         plt.show()
 
-    def graficaEnviados(lista):
+    def graficaEnviados(lista, integrante):
 
         graph_layout='circular'
         node_size=1600
@@ -79,7 +79,7 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            listaNombres.append(('yo', nombre))
+            listaNombres.append((str(integrante), nombre))
             #listaNombres.append(nombre)
             listaEnviados.append(enviados)
             cont = cont + 1
@@ -120,7 +120,7 @@ class Graficos():
         plt.title("Grafo Enviados")
         plt.show()
 
-    def graficaRecibidos(lista):
+    def graficaRecibidos(lista, integrante):
 
         graph_layout='circular'
         node_size=1600
@@ -142,7 +142,7 @@ class Graficos():
 
         for i in lista:
             nombre, enviados, recibidos = lista[cont]
-            listaNombres.append((nombre,'yo'))
+            listaNombres.append((nombre, str(integrante)))
             #listaNombres.append(nombre)
             listaRecibidos.append(recibidos)
             cont = cont + 1
