@@ -43,6 +43,9 @@ class InformacionGrupo(QtGui.QDialog):
         if self.aux is False:
             self.info.btAgregar.setEnabled(False)
             self.info.bteliminarintegrante.setEnabled(False)
+            self.info.btGuardar.setEnabled(False)
+            self.info.txtGrupo.setReadOnly(True)
+            self.info.txtDescripcion.setReadOnly(True)
         else:
             self.info.btAbandonargrupo.setEnabled(False)
 
