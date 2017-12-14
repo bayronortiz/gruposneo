@@ -45,9 +45,9 @@ class Graficos():
         for i in range(len(cantCorreos)):
             plt.bar(X + espacio, cantCorreos[i], color = colores[i], width = 0.25)
             #plt.bar(X + espacio, cantCorreos[1][i], color = colores, width = 0.25)
-            esto = float(colores) + inc
-            colores = repr(esto)
-            espacio = 0.25
+            #esto = float(colores) + inc
+            #colores = repr(esto)
+            #espacio = 0.25
 
         plt.xticks(X + 0.38, listaNombres) #etiquetas en el eje X
         enviados = mpatches.Patch(color=colores[0], label='enviados')
