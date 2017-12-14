@@ -33,7 +33,7 @@ class InformacionGrupo(QtGui.QDialog):
         self.aux=aux
         self.item_integrante = ""
         self.eliminar_seleccionado=None
-        self.grupo_actual=None
+        self.grupo_actual = None
         self.llenar_datos_grupo()
         self.listeners()
         self.permisos_crud() #Permisos para eliminar y agregar

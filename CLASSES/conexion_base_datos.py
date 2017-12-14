@@ -7,7 +7,7 @@ from CLASSES.gmail_api import GmailAPI
 import datetime as dt
 
 # Ruta a Base de Datos
-PATH_BASE_DATOS = "http://neo4j:sistemas@172.17.235.217:7474/db/data"  # Acceso Remoto
+PATH_BASE_DATOS = "http://neo4j:sistemas@192.168.0.126:7474/db/data"  # Acceso Remoto
 #PATH_BASE_DATOS = "localhost:7474"  # Acceso local
 #USUARIO = "neo4j"           # Acceso local
 #PASS = "sistemas"           # Acceso local
