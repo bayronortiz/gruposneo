@@ -88,8 +88,7 @@ class Ui_win_login(object):
         win_login.setTabOrder(self.btAceptar, self.btCancelar)
 
     def retranslateUi(self, win_login):
-        win_login.setWindowTitle(_translate("win_login", "SuperiorCore App Login", None))
+        win_login.setWindowTitle(_translate("win_login", "GruposNeoLogin", None))
         self.label.setText(_translate("win_login", "Ingrese Código de Auntenticación:", None))
         self.btCancelar.setText(_translate("win_login", "Cancelar", None))
         self.btAceptar.setText(_translate("win_login", "Aceptar", None))
-

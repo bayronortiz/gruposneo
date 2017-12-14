@@ -187,7 +187,7 @@ class Ui_principal(object):
         QtCore.QMetaObject.connectSlotsByName(principal)
 
     def retranslateUi(self, principal):
-        principal.setWindowTitle(_translate("principal", "SuperiorCore App", None))
+        principal.setWindowTitle(_translate("principal", "GruposNeo Principal", None))
         self.label_5.setText(_translate("principal", "Información de Login:", None))
         self.label.setText(_translate("principal", "Usuario:", None))
         self.label_3.setText(_translate("principal", "Total Emails:", None))
@@ -200,4 +200,3 @@ class Ui_principal(object):
         self.pushButton.setText(_translate("principal", "Salir", None))
         self.menuArchivo.setTitle(_translate("principal", "Archivo", None))
         self.actionSalir.setText(_translate("principal", "Salir", None))
-
